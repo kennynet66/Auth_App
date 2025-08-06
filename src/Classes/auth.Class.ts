@@ -5,8 +5,8 @@ import { User } from "./user.Class";
 export class Auth {
     async DeactivateUser(id: string): Promise<IResponse> {
         try {
-            const user = new User(id);
-            const findUser = await user.GetUserById();
+            const user = new User();
+            const findUser = await user.GetUserById(id);
             if (!findUser.Success) {
                 return { Success: findUser.Success, Code: findUser.Code, Message: findUser.Message };
             };
@@ -23,8 +23,8 @@ export class Auth {
 
     async ActivateUser(id: string): Promise<IResponse> {
         try {
-            const user = new User(id);
-            const findUser = await user.GetUserById();
+            const user = new User();
+            const findUser = await user.GetUserById(id);
 
             if (!findUser.Success) {
                 return { Success: findUser.Success, Code: findUser.Code, Message: findUser.Message };
