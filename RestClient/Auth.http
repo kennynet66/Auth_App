@@ -1,0 +1,5 @@
+### Deactivate user
+PUT http://localhost:3001/api/DeactivateUser/68936504f2f2e42e5adbb46a
+
+### Activate user
+PUT http://localhost:3001/api/ActivateUser/68936504f2f2e42e5adbb46a

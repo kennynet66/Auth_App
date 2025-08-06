@@ -1,0 +1,20 @@
+POST http://localhost:3001/api/CreateUser
+Content-Type: application/json
+
+{
+    "FirstName": "Admin",
+    "LastName": "Doe",
+    "Email": "admin@yopmail.com",
+    "Password": "1234!",
+    "Role": "SuperAdmin",
+    "PhoneNumber": "254708530896"
+}
+
+###
+GET http://localhost:3001/api/GetAllUsers
+
+### Get User By Id
+GET http://localhost:3001/api/GetUserById/68936504f2f2e42e5adbb46a
+
+### Hard delete a user
+DELETE http://localhost:3001/api/DeleteUser/68935dc82557558d8e0017c5
