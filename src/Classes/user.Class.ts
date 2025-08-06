@@ -69,10 +69,8 @@ export class User {
     }
 
     async UserExists(): Promise<boolean> {
-        try {
-            const user = await UserModel.findById(this.id);
-            if (!user) { return false; };
-            return true;
-        } catch (error) { return false; }
+        const user = await UserModel.findById(this.id);
+        if (!user) { return false; };
+        return true;
     }
 }

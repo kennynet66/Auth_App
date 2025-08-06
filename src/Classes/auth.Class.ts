@@ -1,4 +1,4 @@
-import { IResponse, IUser } from "../CustomTypes/user.Type";
+import { IResponse } from "../CustomTypes/user.Type";
 import { UserModel } from "../Models/user.Model";
 import { User } from "./user.Class";
 

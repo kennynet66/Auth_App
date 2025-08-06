@@ -20,6 +20,6 @@ Mongoose.connect(MongoUrl)
         App.listen(Port, () => {
             console.log(`App is listening on port ${Port}`);
         });
-    }).catch((Error) => {
-        console.log(Error)
+    }).catch((error) => {
+        console.log(error)
     });

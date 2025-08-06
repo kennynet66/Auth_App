@@ -3,17 +3,17 @@ import { IResponse } from "../CustomTypes/user.Type";
 
 export class IError {
     mongooseError = new MongooseError("")
-    HandleMongoError(Error: MongooseError): IResponse {
-        if (Error.name === "CastError") {
+    HandleMongoError(error: MongooseError): IResponse {
+        if (error.name === "CastError") {
             return { Success: true, Code: 400, Message: "Invalid Id" };
         }
 
-        if (Error.name === "ValidationError") {
-            return { Success: true, Code: 400, Message: Error.message };
+        if (error.name === "ValidationError") {
+            return { Success: true, Code: 400, Message: error.message };
         }
 
-        if (Error.name === "MongooseError") {
-            return { Success: true, Code: 400, Message: Error.message };
+        if (error.name === "MongooseError") {
+            return { Success: true, Code: 400, Message: error.message };
         };
 
         return { Success: false, Code: 200, Message: "Not a known Mongo Error" };
