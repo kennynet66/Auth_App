@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import { IUser } from "../CustomTypes/user.Type";
 import { User } from "../Classes/user.Class";
 import Bcrypt from "bcryptjs";
-import { Auth } from "../Classes/auth.Class";
 
 const userClass = new User;
 

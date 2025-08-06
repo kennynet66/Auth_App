@@ -53,7 +53,7 @@ export class User {
             if (!await this.UserExists(id)) {
                 return { Success: false, Code: 404, Message: `User of Id: ${id} not found!`, };
             }
-            const userDeleted = await UserModel.findByIdAndDelete(id);
+            await UserModel.findByIdAndDelete(id);
             return { Success: true, Code: 200, Message: `User deleted successfully` };
         } catch (error) {
             const findError: IResponse = errorHandler.GetError(error);
